@@ -16,6 +16,7 @@
 		80688218234EC5FC00D76477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80688216234EC5FC00D76477 /* LaunchScreen.storyboard */; };
 		80688220234EC92000D76477 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068821F234EC92000D76477 /* Filme.swift */; };
 		80688222234F73C600D76477 /* CellFilmes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80688221234F73C600D76477 /* CellFilmes.swift */; };
+		80688224234F96C800D76477 /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80688223234F96C800D76477 /* DetailMovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		80688219234EC5FC00D76477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8068821F234EC92000D76477 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Filme.swift; path = ../../Filme.swift; sourceTree = "<group>"; };
 		80688221234F73C600D76477 /* CellFilmes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellFilmes.swift; path = ../../CellFilmes.swift; sourceTree = "<group>"; };
+		80688223234F96C800D76477 /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				8068821F234EC92000D76477 /* Filme.swift */,
 				8068820C234EC5F900D76477 /* ViewController.swift */,
 				80688221234F73C600D76477 /* CellFilmes.swift */,
+				80688223234F96C800D76477 /* DetailMovieViewController.swift */,
 				8068820E234EC5F900D76477 /* Main.storyboard */,
 				80688216234EC5FC00D76477 /* LaunchScreen.storyboard */,
 				80688214234EC5FC00D76477 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			files = (
 				8068820D234EC5F900D76477 /* ViewController.swift in Sources */,
 				80688213234EC5F900D76477 /* Meus_Filmes.xcdatamodeld in Sources */,
+				80688224234F96C800D76477 /* DetailMovieViewController.swift in Sources */,
 				80688220234EC92000D76477 /* Filme.swift in Sources */,
 				80688222234F73C600D76477 /* CellFilmes.swift in Sources */,
 				80688209234EC5F900D76477 /* AppDelegate.swift in Sources */,

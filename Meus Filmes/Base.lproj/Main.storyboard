@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,6 +54,7 @@
                                     <outlet property="ccellImageView" destination="Mpn-AN-Tpr" id="NHo-ov-ZEz"/>
                                     <outlet property="labelDescricao" destination="yQG-nU-kRD" id="Ea5-QL-dgB"/>
                                     <outlet property="labelTitulo" destination="n86-Gw-XER" id="zoW-g3-kFx"/>
+                                    <segue destination="kfG-gZ-rga" kind="show" identifier="detailMovie" id="Kd3-NT-Ntn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,11 +63,54 @@
                             <outlet property="delegate" destination="esR-eE-ztj" id="cuA-eE-mS6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Meus Filmes" id="WKF-K7-ZuQ"/>
+                    <navigationItem key="navigationItem" title="Meus Filmes" id="WKF-K7-ZuQ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7B0-tO-Xb8"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rt-5b-jtP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-97.101449275362327" y="39.508928571428569"/>
+        </scene>
+        <!--Detail Movie View Controller-->
+        <scene sceneID="OnG-dl-Yk1">
+            <objects>
+                <viewController id="kfG-gZ-rga" customClass="DetailMovieViewController" customModule="Meus_Filmes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dHf-2P-nKj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="filme1" translatesAutoresizingMaskIntoConstraints="NO" id="2ql-3n-0qI">
+                                <rect key="frame" x="20" y="106" width="374" height="394"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM6-At-f62">
+                                <rect key="frame" x="20" y="508" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiI-xK-wks">
+                                <rect key="frame" x="20" y="546" width="374" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5t7-l8-QGh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L3m-fX-Gz2"/>
+                    <connections>
+                        <outlet property="detailMovieDesc" destination="FiI-xK-wks" id="icX-aB-Eo9"/>
+                        <outlet property="detailMovieImage" destination="2ql-3n-0qI" id="r1S-65-zOL"/>
+                        <outlet property="detailMovieTitle" destination="DM6-At-f62" id="sAB-qr-ORr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44c-mO-q71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.60869565217399" y="39.508928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BST-wd-FtP">
@@ -86,4 +131,7 @@
             <point key="canvasLocation" x="-999" y="40"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filme1" width="252.66667175292969" height="268.33334350585938"/>
+    </resources>
 </document>

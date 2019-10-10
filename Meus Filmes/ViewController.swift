@@ -11,10 +11,10 @@ class ViewController: UITableViewController {
         
         var filme: Filme
         
-        filme = Filme(titulo: "007 - Spectre", descricao: "Descrição 1", imagem: UIImage(named: "filme1")!)
+        filme = Filme(titulo: "007 - Spectre", descricao: "James Bond chega à Cidade do México e está pronto para eliminar Marco Sciarra sem que o chef M saiba da missão. O caso leva à suspensão temporária do agente, que passa a ser constantemente vigiado pelo governo britânico graças a uma tecnologia implantada em seu corpo por Q. Na tentativa de despistar os inimigos e até mesmo alguns de seus parceiros de trabalho, ele se responsabiliza por ajudar a filha de um desafeto. Toda a situação o leva ao centro de uma temida organização denominada Spectre.", imagem: UIImage(named: "filme1")!)
         filmes.append( filme )
         
-        filme = Filme(titulo: "Star Wars", descricao: "Descrição 2", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Star Wars", descricao: "A queda de Darth Vader e do Império levou ao surgimento de uma nova força sombria: a Primeira Ordem. Eles procuram o jedi Luke Skywalker, desaparecido. A resistência tenta desesperadamente encontrá-lo antes para salvar a galáxia.", imagem: UIImage(named: "filme2")!)
         filmes.append( filme )
         
         filme = Filme(titulo: "Impacto Mortal", descricao: "Descrição 2", imagem: UIImage(named: "filme3")!)
@@ -63,6 +63,20 @@ class ViewController: UITableViewController {
         celula.ccellImageView.clipsToBounds = true
         
         return celula
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detailMovie" {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                let movieSelected = self.filmes[indexPath.row]
+                let viewContrtollerDest = segue.destination as! DetailMovieViewController
+                viewContrtollerDest.movie = movieSelected
+                
+            }
+        }
     }
 
 
